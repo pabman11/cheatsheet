@@ -10,72 +10,72 @@
     },
     {
         "alias": "1",
-        "command": "'cd -1'",
+        "command": "cd -1",
         "explain": "Muevete al directorio anterior en el historial"
     },
     {
         "alias": "2",
-        "command": "'cd -2'",
+        "command": "cd -2",
         "explain": "Muevete al directorio -2 en el historial"
     },
     {
         "alias": "3",
-        "command": "'cd -3'",
+        "command": "cd -3",
         "explain": "Muevete al directorio -3 en el historial"
     },
     {
         "alias": "4",
-        "command": "'cd -4'",
+        "command": "cd -4",
         "explain": "Muevete al directorio -4 en el historial"
     },
     {
         "alias": "5",
-        "command": "'cd -5'",
+        "command": "cd -5",
         "explain": "Muevete al directorio -5 en el historial"
     },
     {
         "alias": "6",
-        "command": "'cd -6'",
+        "command": "cd -6",
         "explain": "Muevete al directorio -6 en el historial"
     },
     {
         "alias": "7",
-        "command": "'cd -7'",
+        "command": "cd -7",
         "explain": "Muevete al directorio -7 en el historial"
     },
     {
         "alias": "8",
-        "command": "'cd -8'",
+        "command": "cd -8",
         "explain": "Muevete al directorio -8 en el historial"
     },
     {
         "alias": "9",
-        "command": "'cd -9'",
+        "command": "cd -9",
         "explain": "Muevete al directorio -9 en el historial"
     },
     {
         "alias": "_",
-        "command": "'sudo '",
+        "command": "sudo ",
         "explain": "Ejecuta un comando como superadmin"
     },
     {
         "alias": "afind",
-        "command": "'ack -il'"
+        "command": "ack -il"
     },
     {
         "alias": "diff",
-        "command": "'diff --color'",
+        "command": "diff --color",
         "explain": "Ejecuta un diff con colores",
         "warning": "Sobreeescribe al comando diff"
     },
     {
         "alias": "egrep",
-        "command": "'egrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'",
+        "command": "egrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}",
         "explain": "Ejecuta una búsqueda con grep usando una expresión regular"
     },
     {
         "alias": "fgrep",
-        "command": "'fgrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'",
+        "command": "fgrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}",
         "explain": "Ejecuta una búsqueda de un listado de strings (separadas por saltos de línea)"
     },
     {
@@ -85,301 +85,301 @@
     },
     {
         "alias": "ga",
-        "command": "'git add'",
+        "command": "git add",
         "explain": "Añade archivos al commit de git"
     },
     {
         "alias": "gaa",
-        "command": "'git add --all'",
+        "command": "git add --all",
         "explain": "Añade todos los archivos rastreados al commit del git"
     },
     {
         "alias": "gam",
-        "command": "'git am'",
+        "command": "git am",
         "explain": "Toma un buzón de confirmaciones formateadas como mensajes de correo electrónico (por ejemplo, la salida de git format-patch) y las aplica a la rama actual"
     },
     {
         "alias": "gama",
-        "command": "'git am --abort'",
+        "command": "git am --abort",
         "explain": "Aborta el parche ejecutado y devuelve la rama a su estado original"
     },
     {
         "alias": "gamc",
-        "command": "'git am --continue'",
+        "command": "git am --continue",
         "explain": "Confirma el fix ejecutado a un parche fallido"
     },
     {
         "alias": "gams",
-        "command": "'git am --skip'",
+        "command": "git am --skip",
         "explain": "Salta el parche actual. Solo funciona cuando se ha abortado el parcheado"
     },
     {
         "alias": "gamscp",
-        "command": "'git am --show-current-patch'",
+        "command": "git am --show-current-patch",
         "explain": "Muestra el mensaje con el cual el git am ha fallado"
     },
     {
         "alias": "gap",
-        "command": "'git apply'",
+        "command": "git apply",
         "explain": "Aplica un parche generado por git-diff"
     },
     {
         "alias": "gapa",
-        "command": "'git add --patch'",
+        "command": "git add --patch",
         "explain": "Recorre todos los cambios del commit y permite añadir solo trozos pequeños de cada archivo"
     },
     {
         "alias": "gapt",
-        "command": "'git apply --3way'",
+        "command": "git apply --3way",
         "explain": "Intenta aplicar un parche a tres bandas",
         "link": "https://git-scm.com/docs/git-apply#Documentation/git-apply.txt---3way"
     },
     {
         "alias": "gau",
-        "command": "'git add --update'",
+        "command": "git add --update",
         "explain": "Añade solo archivos modificados o eliminados al commit"
     },
     {
         "alias": "gav",
-        "command": "'git add --verbose'",
+        "command": "git add --verbose",
         "explain": "Añade archivos al commit y explica que cambios tiene cada archivo"
     },
     {
         "alias": "gb",
-        "command": "'git branch'",
+        "command": "git branch",
         "explain": "Crea una rama nueva"
     },
     {
         "alias": "gbD",
-        "command": "'git branch -D'",
+        "command": "git branch -D",
         "explain": "Elimina una rama forzando los cambios"
     },
     {
         "alias": "gba",
-        "command": "'git branch -a'",
+        "command": "git branch -a",
         "explain": "Muestra todas las ramas tanto locales como remotas"
     },
     {
         "alias": "gbd",
-        "command": "'git branch -d'",
+        "command": "git branch -d",
         "explain": "Elimina una rama"
     },
     {
         "alias": "gbda",
-        "command": "git branch --no-color --merged | command grep -vE `^([+*]|\s*($(git_main_branch)|$(git_develop_branch))\s*$)`| command xargs git branch -d 2>/dev/null"
+        "command": "git branch --no-color --merged | command grep -vE `^([+*]|\\s*($(git_main_branch)|$(git_develop_branch))\\s*$)`| command xargs git branch -d 2>/dev/null"
     },
     {
         "alias": "gbl",
-        "command": "'git blame -b -w'",
+        "command": "git blame -b -w",
         "explain": "Muestra quien y cuando ha modificado cada linea de un archivo"
     },
     {
         "alias": "gbnm",
-        "command": "'git branch --no-merged'",
+        "command": "git branch --no-merged",
         "explain": "Lista las ramas que no tienen ese commit (HEAD si no se especifica el commit)"
     },
     {
         "alias": "gbr",
-        "command": "'git branch --remote'",
+        "command": "git branch --remote",
         "explain": "Lista las ramas que existen en el remote"
     },
     {
         "alias": "gbs",
-        "command": "'git bisect'",
+        "command": "git bisect",
         "link": "https://git-scm.com/docs/git-bisect"
     },
     {
         "alias": "gbsb",
-        "command": "'git bisect bad'",
+        "command": "git bisect bad",
         "link": "https://git-scm.com/docs/git-bisect"
     },
     {
         "alias": "gbsg",
-        "command": "'git bisect good'",
+        "command": "git bisect good",
         "link": "https://git-scm.com/docs/git-bisect"
     },
     {
         "alias": "gbsr",
-        "command": "'git bisect reset'",
+        "command": "git bisect reset",
         "link": "https://git-scm.com/docs/git-bisect"
     },
     {
         "alias": "gbss",
-        "command": "'git bisect start'",
+        "command": "git bisect start",
         "link": "https://git-scm.com/docs/git-bisect"
     },
     {
         "alias": "gc",
-        "command": "'git commit -v'",
+        "command": "git commit -v",
         "explain": "Hace el commit mostrando los cambios"
     },
     {
         "alias": "gc!",
-        "command": "'git commit -v --amend'",
+        "command": "git commit -v --amend",
         "explain": "Permite cambiar el mensaje del commit"
     },
     {
         "alias": "gca",
-        "command": "'git commit -v -a'",
+        "command": "git commit -v -a",
         "explain": "Añade al stage todos los cambios y despues hace el commit"
     },
     {
-        "alias": "'gca!'",
-        "command": "'git commit -v -a --amend'"
+        "alias": "gca!",
+        "command": "git commit -v -a --amend"
     },
     {
         "alias": "gcam",
-        "command": "'git commit -a -m'",
+        "command": "git commit -a -m",
         "explain": "Añade todos los cambios con el mensaje siguiente"
     },
     {
-        "alias": "'gcan!'",
-        "command": "'git commit -v -a --no-edit --amend'"
+        "alias": "gcan!",
+        "command": "git commit -v -a --no-edit --amend"
     },
     {
-        "alias": "'gcans!'",
-        "command": "'git commit -v -a -s --no-edit --amend'"
+        "alias": "gcans!",
+        "command": "git commit -v -a -s --no-edit --amend"
     },
     {
         "alias": "gcas",
-        "command": "'git commit -a -s'"
+        "command": "git commit -a -s"
     },
     {
         "alias": "gcasm",
-        "command": "'git commit -a -s -m'"
+        "command": "git commit -a -s -m"
     },
     {
         "alias": "gcb",
-        "command": "'git checkout -b'"
+        "command": "git checkout -b"
     },
     {
         "alias": "gcd",
-        "command": "'git checkout $(git_develop_branch)'",
+        "command": "git checkout $(git_develop_branch)",
         "explain": "Cambia la rama actual a develop"
     },
     {
         "alias": "gcf",
-        "command": "'git config --list'"
+        "command": "git config --list"
     },
     {
         "alias": "gcl",
-        "command": "'git clone --recurse-submodules'"
+        "command": "git clone --recurse-submodules"
     },
     {
         "alias": "gclean",
-        "command": "'git clean -id'"
+        "command": "git clean -id"
     },
     {
         "alias": "gcm",
-        "command": "'git checkout $(git_main_branch)'"
+        "command": "git checkout $(git_main_branch)"
     },
     {
         "alias": "gcmsg",
-        "command": "'git commit -m'"
+        "command": "git commit -m"
     },
     {
-        "alias": "'gcn!'",
-        "command": "'git commit -v --no-edit --amend'"
+        "alias": "gcn!",
+        "command": "git commit -v --no-edit --amend"
     },
     {
         "alias": "gco",
-        "command": "'git checkout'"
+        "command": "git checkout"
     },
     {
         "alias": "gcor",
-        "command": "'git checkout --recurse-submodules'"
+        "command": "git checkout --recurse-submodules"
     },
     {
         "alias": "gcount",
-        "command": "'git shortlog -sn'"
+        "command": "git shortlog -sn"
     },
     {
         "alias": "gcp",
-        "command": "'git cherry-pick'"
+        "command": "git cherry-pick"
     },
     {
         "alias": "gcpa",
-        "command": "'git cherry-pick --abort'"
+        "command": "git cherry-pick --abort"
     },
     {
         "alias": "gcpc",
-        "command": "'git cherry-pick --continue'"
+        "command": "git cherry-pick --continue"
     },
     {
         "alias": "gcs",
-        "command": "'git commit -S'"
+        "command": "git commit -S"
     },
     {
         "alias": "gcsm",
-        "command": "'git commit -s -m'"
+        "command": "git commit -s -m"
     },
     {
         "alias": "gcss",
-        "command": "'git commit -S -s'"
+        "command": "git commit -S -s"
     },
     {
         "alias": "gcssm",
-        "command": "'git commit -S -s -m'"
+        "command": "git commit -S -s -m"
     },
     {
         "alias": "gd",
-        "command": "'git diff'"
+        "command": "git diff"
     },
     {
         "alias": "gdca",
-        "command": "'git diff --cached'"
+        "command": "git diff --cached"
     },
     {
         "alias": "gdct",
-        "command": "'git describe --tags $(git rev-list --tags --max-count=1)'"
+        "command": "git describe --tags $(git rev-list --tags --max-count=1)"
     },
     {
         "alias": "gdcw",
-        "command": "'git diff --cached --word-diff'"
+        "command": "git diff --cached --word-diff"
     },
     {
         "alias": "gds",
-        "command": "'git diff --staged'"
+        "command": "git diff --staged"
     },
     {
         "alias": "gdt",
-        "command": "'git diff-tree --no-commit-id --name-only -r'"
+        "command": "git diff-tree --no-commit-id --name-only -r"
     },
     {
         "alias": "gdup",
-        "command": "'git diff @{upstream}'"
+        "command": "git diff @{upstream}"
     },
     {
         "alias": "gdw",
-        "command": "'git diff --word-diff'"
+        "command": "git diff --word-diff"
     },
     {
         "alias": "gf",
-        "command": "'git fetch'"
+        "command": "git fetch"
     },
     {
         "alias": "gfa",
-        "command": "'git fetch --all --prune --jobs=10'"
+        "command": "git fetch --all --prune --jobs=10"
     },
     {
         "alias": "gfg",
-        "command": "'git ls-files | grep'"
+        "command": "git ls-files | grep"
     },
     {
         "alias": "gfo",
-        "command": "'git fetch origin'"
+        "command": "git fetch origin"
     },
     {
         "alias": "gg",
-        "command": "'git gui citool'"
+        "command": "git gui citool"
     },
     {
         "alias": "gga",
-        "command": "'git gui citool --amend'"
+        "command": "git gui citool --amend"
     },
     {
         "alias": "ggpull",
-        "command": "'git pull origin `$(git_current_branch)`'"
+        "command": "git pull origin `$(git_current_branch)`"
     },
     {
         "alias": "ggpur",
@@ -387,96 +387,96 @@
     },
     {
         "alias": "ggpush",
-        "command": "'git push origin `$(git_current_branch)`'"
+        "command": "git push origin `$(git_current_branch)`"
     },
     {
         "alias": "ggsup",
-        "command": "'git branch --set-upstream-to=origin/$(git_current_branch)'"
+        "command": "git branch --set-upstream-to=origin/$(git_current_branch)"
     },
     {
         "alias": "ghh",
-        "command": "'git help'"
+        "command": "git help"
     },
     {
         "alias": "gignore",
-        "command": "'git update-index --assume-unchanged'"
+        "command": "git update-index --assume-unchanged"
     },
     {
         "alias": "gignored",
-        "command": "'git ls-files -v | grep `^[[:lower:]]`'"
+        "command": "git ls-files -v | grep `^[[:lower:]]`"
     },
     {
         "alias": "git-svn-dcommit-push",
-        "command": "'git svn dcommit && git push github $(git_main_branch):svntrunk'"
+        "command": "git svn dcommit && git push github $(git_main_branch):svntrunk"
     },
     {
         "alias": "gk",
-        "command": "'\gitk --all --branches &!'"
+        "command": "\\gitk --all --branches &!"
     },
     {
         "alias": "gke",
-        "command": "'\gitk --all $(git log -g --pretty=%h) &!'"
+        "command": "\\gitk --all $(git log -g --pretty=%h) &!"
     },
     {
         "alias": "gl",
-        "command": "'git pull'"
+        "command": "git pull"
     },
     {
         "alias": "glg",
-        "command": "'git log --stat'"
+        "command": "git log --stat"
     },
     {
         "alias": "glgg",
-        "command": "'git log --graph'"
+        "command": "git log --graph"
     },
     {
         "alias": "glgga",
-        "command": "'git log --graph --decorate --all'"
+        "command": "git log --graph --decorate --all"
     },
     {
         "alias": "glgm",
-        "command": "'git log --graph --max-count=10'"
+        "command": "git log --graph --max-count=10"
     },
     {
         "alias": "glgp",
-        "command": "'git log --stat -p'"
+        "command": "git log --stat -p"
     },
     {
         "alias": "glo",
-        "command": "'git log --oneline --decorate'"
+        "command": "git log --oneline --decorate"
     },
     {
         "alias": "globurl",
-        "command": "'noglob urlglobber '"
+        "command": "noglob urlglobber "
     },
     {
         "alias": "glod",
-        "command": "'git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\'"
+        "command": "git log --graph --pretty='\\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\\"
     },
     {
         "alias": "glods",
-        "command": "'git log --graph --pretty",
-        "command": "'git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\'' --date=short'"
+        "command": "git log --graph --pretty",
+        "command": "git log --graph --pretty='\\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\\'' --date=short"
     },
     {
         "alias": "glog",
-        "command": "'git log --oneline --decorate --graph'"
+        "command": "git log --oneline --decorate --graph"
     },
     {
         "alias": "gloga",
-        "command": "'git log --oneline --decorate --graph --all'"
+        "command": "git log --oneline --decorate --graph --all"
     },
     {
         "alias": "glol",
-        "command": "'git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'\'"
+        "command": "git log --graph --pretty='\\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'\\"
     },
     {
         "alias": "glola",
-        "command": "'git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'\'' --all'"
+        "command": "git log --graph --pretty='\\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'\\'' --all"
     },
     {
         "alias": "glols",
-        "command": "'git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'\'' --stat'"
+        "command": "git log --graph --pretty='\\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'\\'' --stat"
     },
     {
         "alias": "glp",
@@ -484,315 +484,315 @@
     },
     {
         "alias": "glum",
-        "command": "'git pull upstream $(git_main_branch)'"
+        "command": "git pull upstream $(git_main_branch)"
     },
     {
         "alias": "gm",
-        "command": "'git merge'"
+        "command": "git merge"
     },
     {
         "alias": "gma",
-        "command": "'git merge --abort'"
+        "command": "git merge --abort"
     },
     {
         "alias": "gmom",
-        "command": "'git merge origin/$(git_main_branch)'"
+        "command": "git merge origin/$(git_main_branch)"
     },
     {
         "alias": "gmtl",
-        "command": "'git mergetool --no-prompt'"
+        "command": "git mergetool --no-prompt"
     },
     {
         "alias": "gmtlvim",
-        "command": "'git mergetool --no-prompt --tool=vimdiff'"
+        "command": "git mergetool --no-prompt --tool=vimdiff"
     },
     {
         "alias": "gmum",
-        "command": "'git merge upstream/$(git_main_branch)'"
+        "command": "git merge upstream/$(git_main_branch)"
     },
     {
         "alias": "gp",
-        "command": "'git push'"
+        "command": "git push"
     },
     {
         "alias": "gpd",
-        "command": "'git push --dry-run'"
+        "command": "git push --dry-run"
     },
     {
         "alias": "gpf",
-        "command": "'git push --force-with-lease'"
+        "command": "git push --force-with-lease"
     },
     {
-        "alias": "'gpf!'",
-        "command": "'git push --force'"
+        "alias": "gpf!",
+        "command": "git push --force"
     },
     {
         "alias": "gpoat",
-        "command": "'git push origin --all && git push origin --tags'"
+        "command": "git push origin --all && git push origin --tags"
     },
     {
         "alias": "gpr",
-        "command": "'git pull --rebase'"
+        "command": "git pull --rebase"
     },
     {
         "alias": "gpristine",
-        "command": "'git reset --hard && git clean -dffx'"
+        "command": "git reset --hard && git clean -dffx"
     },
     {
         "alias": "gpsup",
-        "command": "'git push --set-upstream origin $(git_current_branch)'"
+        "command": "git push --set-upstream origin $(git_current_branch)"
     },
     {
         "alias": "gpu",
-        "command": "'git push upstream'"
+        "command": "git push upstream"
     },
     {
         "alias": "gpv",
-        "command": "'git push -v'"
+        "command": "git push -v"
     },
     {
         "alias": "gr",
-        "command": "'git remote'"
+        "command": "git remote"
     },
     {
         "alias": "gra",
-        "command": "'git remote add'"
+        "command": "git remote add"
     },
     {
         "alias": "grb",
-        "command": "'git rebase'"
+        "command": "git rebase"
     },
     {
         "alias": "grba",
-        "command": "'git rebase --abort'"
+        "command": "git rebase --abort"
     },
     {
         "alias": "grbc",
-        "command": "'git rebase --continue'"
+        "command": "git rebase --continue"
     },
     {
         "alias": "grbd",
-        "command": "'git rebase $(git_develop_branch)'"
+        "command": "git rebase $(git_develop_branch)"
     },
     {
         "alias": "grbi",
-        "command": "'git rebase -i'"
+        "command": "git rebase -i"
     },
     {
         "alias": "grbm",
-        "command": "'git rebase $(git_main_branch)'"
+        "command": "git rebase $(git_main_branch)"
     },
     {
         "alias": "grbo",
-        "command": "'git rebase --onto'"
+        "command": "git rebase --onto"
     },
     {
         "alias": "grbom",
-        "command": "'git rebase origin/$(git_main_branch)'"
+        "command": "git rebase origin/$(git_main_branch)"
     },
     {
         "alias": "grbs",
-        "command": "'git rebase --skip'"
+        "command": "git rebase --skip"
     },
     {
         "alias": "grep --color",
-        "command": "'grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'"
+        "command": "grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
     },
     {
         "alias": "grev",
-        "command": "'git revert'"
+        "command": "git revert"
     },
     {
         "alias": "grh",
-        "command": "'git reset'"
+        "command": "git reset"
     },
     {
         "alias": "grhh",
-        "command": "'git reset --hard'"
+        "command": "git reset --hard"
     },
     {
         "alias": "grm",
-        "command": "'git rm'"
+        "command": "git rm"
     },
     {
         "alias": "grmc",
-        "command": "'git rm --cached'"
+        "command": "git rm --cached"
     },
     {
         "alias": "grmv",
-        "command": "'git remote rename'"
+        "command": "git remote rename"
     },
     {
         "alias": "groh",
-        "command": "'git reset origin/$(git_current_branch) --hard'"
+        "command": "git reset origin/$(git_current_branch) --hard"
     },
     {
         "alias": "grrm",
-        "command": "'git remote remove'"
+        "command": "git remote remove"
     },
     {
         "alias": "grs",
-        "command": "'git restore'"
+        "command": "git restore"
     },
     {
         "alias": "grset",
-        "command": "'git remote set-url'"
+        "command": "git remote set-url"
     },
     {
         "alias": "grss",
-        "command": "'git restore --source'"
+        "command": "git restore --source"
     },
     {
         "alias": "grst",
-        "command": "'git restore --staged'"
+        "command": "git restore --staged"
     },
     {
         "alias": "grt",
-        "command": "'cd { alias:`$(git rev-parse --show-toplevel || echo .)`'"
+        "command": "cd { alias:`$(git rev-parse --show-toplevel || echo .)`"
     },
     {
         "alias": "gru",
-        "command": "'git reset --'"
+        "command": "git reset --"
     },
     {
         "alias": "grup",
-        "command": "'git remote update'"
+        "command": "git remote update"
     },
     {
         "alias": "grv",
-        "command": "'git remote -v'"
+        "command": "git remote -v"
     },
     {
         "alias": "gsb",
-        "command": "'git status -sb'"
+        "command": "git status -sb"
     },
     {
         "alias": "gsd",
-        "command": "'git svn dcommit'"
+        "command": "git svn dcommit"
     },
     {
         "alias": "gsh",
-        "command": "'git show'"
+        "command": "git show"
     },
     {
         "alias": "gsi",
-        "command": "'git submodule init'"
+        "command": "git submodule init"
     },
     {
         "alias": "gsps",
-        "command": "'git show --pretty=short --show-signature'"
+        "command": "git show --pretty=short --show-signature"
     },
     {
         "alias": "gsr",
-        "command": "'git svn rebase'"
+        "command": "git svn rebase"
     },
     {
         "alias": "gss",
-        "command": "'git status -s'"
+        "command": "git status -s"
     },
     {
         "alias": "gst",
-        "command": "'git status'"
+        "command": "git status"
     },
     {
         "alias": "gsta",
-        "command": "'git stash push'"
+        "command": "git stash push"
     },
     {
         "alias": "gstaa",
-        "command": "'git stash apply'"
+        "command": "git stash apply"
     },
     {
         "alias": "gstall",
-        "command": "'git stash --all'"
+        "command": "git stash --all"
     },
     {
         "alias": "gstc",
-        "command": "'git stash clear'"
+        "command": "git stash clear"
     },
     {
         "alias": "gstd",
-        "command": "'git stash drop'"
+        "command": "git stash drop"
     },
     {
         "alias": "gstl",
-        "command": "'git stash list'"
+        "command": "git stash list"
     },
     {
         "alias": "gstp",
-        "command": "'git stash pop'"
+        "command": "git stash pop"
     },
     {
         "alias": "gsts",
-        "command": "'git stash show --text'"
+        "command": "git stash show --text"
     },
     {
         "alias": "gstu",
-        "command": "'gsta --include-untracked'"
+        "command": "gsta --include-untracked"
     },
     {
         "alias": "gsu",
-        "command": "'git submodule update'"
+        "command": "git submodule update"
     },
     {
         "alias": "gsw",
-        "command": "'git switch'"
+        "command": "git switch"
     },
     {
         "alias": "gswc",
-        "command": "'git switch -c'"
+        "command": "git switch -c"
     },
     {
         "alias": "gswd",
-        "command": "'git switch $(git_develop_branch)'"
+        "command": "git switch $(git_develop_branch)"
     },
     {
         "alias": "gswm",
-        "command": "'git switch $(git_main_branch)'"
+        "command": "git switch $(git_main_branch)"
     },
     {
         "alias": "gtl",
-        "command": "'gtl='gtl(){ git tag --sort=-v:refname -n -l `${1}*` }; noglob gtl''"
+        "command": "gtl='gtl(){ git tag --sort=-v:refname -n -l `${1}*` }; noglob gtl'"
     },
     {
         "alias": "gts",
-        "command": "'git tag -s'"
+        "command": "git tag -s"
     },
     {
         "alias": "gtv",
-        "command": "'git tag | sort -V'"
+        "command": "git tag | sort -V"
     },
     {
         "alias": "gunignore",
-        "command": "'git update-index --no-assume-unchanged'"
+        "command": "git update-index --no-assume-unchanged"
     },
     {
         "alias": "gunwip",
-        "command": "'git log -n 1 | grep -q -c `\-\-wip\-\-` && git reset HEAD~1'"
+        "command": "git log -n 1 | grep -q -c `\\-\\-wip\\-\\-` && git reset HEAD~1"
     },
     {
         "alias": "gup",
-        "command": "'git pull --rebase'"
+        "command": "git pull --rebase"
     },
     {
         "alias": "gupa",
-        "command": "'git pull --rebase --autostash'"
+        "command": "git pull --rebase --autostash"
     },
     {
         "alias": "gupav",
-        "command": "'git pull --rebase --autostash -v'"
+        "command": "git pull --rebase --autostash -v"
     },
     {
         "alias": "gupv",
-        "command": "'git pull --rebase -v'"
+        "command": "git pull --rebase -v"
     },
     {
         "alias": "gwch",
-        "command": "'git whatchanged -p --abbrev-commit --pretty=medium'"
+        "command": "git whatchanged -p --abbrev-commit --pretty=medium"
     },
     {
         "alias": "gwip",
-        "command": "'git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m `--wip-- [skip ci]`'"
+        "command": "git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m `--wip-- [skip ci]`"
     },
     {
         "alias": "history",
@@ -801,27 +801,27 @@
     },
     {
         "alias": "l",
-        "command": "'ls -lah'"
+        "command": "ls -lah"
     },
     {
         "alias": "la",
-        "command": "'ls -lAh'"
+        "command": "ls -lAh"
     },
     {
         "alias": "ll",
-        "command": "'ls -lh'"
+        "command": "ls -lh"
     },
     {
         "alias": "ls",
-        "command": "'ls --color=tty'"
+        "command": "ls --color=tty"
     },
     {
         "alias": "lsa",
-        "command": "'ls -lah'"
+        "command": "ls -lah"
     },
     {
         "alias": "md",
-        "command": "'mkdir -p'",
+        "command": "mkdir -p",
         "explain": "Crea directorios recursivamente"
     },
     {
