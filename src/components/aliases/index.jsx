@@ -29,13 +29,12 @@ export default function Aliases() {
 
   const copyToClipboard = (command) => {
     navigator.clipboard.writeText(command);
-    console.log("Copied to clipboard: " + command);
-    onOpenModal('Copied! 🎉'+ command);
+    onOpenModal('🍨 Copied to clipboard 🍨 - ' + command);
   }
 
   return (
     <>
-      <h1>Aliases</h1>
+      <h1 className={`text-3xl text-center font-bold mb-4`}>Aliases</h1>
       <section className={`container mx-auto px-4`}>
         {aliases.map((alias) => (
           <Alias
@@ -45,9 +44,13 @@ export default function Aliases() {
           />
         ))}
       </section>
-      <Modal open={isOpen} onClose={onCloseModal} center classNames={{
-          modal: 'w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5',
+      <Modal open={isOpen} onClose={onCloseModal} top classNames={{
+          modal: 'w-100 md:w-1/3 lg:w-1/4 xl:w-1/5 bg-green-100 rounded-lg shadow-lg',
+          modalAnimationIn: 'slideToTop',
+          modalAnimationOut: 'fadeOut'
         }}
+        animationDuration={500}
+        animationOutDuration={200}
 >
         <p>
         {textShown}
