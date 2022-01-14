@@ -1,29 +1,40 @@
-import reactDom from "react-dom"
-import { useEffect, useState } from "react"
-import getAliases from "../../services/getAliases"
-import Alias from "../Alias"
-export default function Aliases()
-{
-    const [aliases, setAliases] = useState([]);
+import reactDom from "react-dom";
+import { useEffect, useState } from "react";
+import getAliases from "../../services/getAliases";
+import Alias from "../Alias";
+import Popup from "../Helpers/Popup";
 
-    useEffect(() =>
-    {
-        const fetcData = async () => {
-            const result = await getAliases();
-            setAliases(result);
-        }
+export default function Aliases() {
+  const [aliases, setAliases] = useState([]);
+  const [textShown, setTextShown] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
-        fetcData();
-    }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getAliases();
+      setAliases(result);
+    };
 
-    return (
-        <>
-            <h1>Aliases</h1>
-            <section className={`list-none `}>
-                {aliases.map(alias => (
-                    <Alias key={alias.alias} {...alias} />
-                ))}
-            </section>
-        </>
-    )
+    fetchData();
+    
+  }, []);
+  return (
+    <>
+      <h1>Aliases</h1>
+      <section className={`container mx-auto px-4`}>
+        {aliases.map((alias) => (
+          <Alias
+            key={alias.alias}
+            {...alias}
+          />
+        ))}
+      </section>
+      <Popup
+        selector="popup"
+        text={textShown}
+        isOpen={isOpen}
+        time={2000}
+      />
+    </>
+  );
 }
