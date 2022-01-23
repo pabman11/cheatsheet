@@ -21,7 +21,7 @@ export default function Aliases() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await getAliases();
-      setAliases(result);
+      setAliases(result.aliases);
     };
 
     fetchData();
@@ -36,7 +36,27 @@ export default function Aliases() {
   return (
     <>
       <ListOfAliasTypes />
-
+      <section className={`container mx-auto px-4`}>
+        {aliases.map((alias) => (
+          <Alias
+            key={alias.alias}
+            {...alias}
+            customClickEvent={() => { copyToClipboard(alias.alias); }}
+          />
+        ))}
+      </section>
+      <Modal open={isOpen} onClose={onCloseModal} top classNames={{
+          modal: 'w-100 md:w-1/3 lg:w-1/4 xl:w-1/5 bg-green-100 rounded-lg shadow-lg',
+          modalAnimationIn: 'slideToTop',
+          modalAnimationOut: 'fadeOut'
+        }}
+        animationDuration={500}
+        animationOutDuration={200}
+>
+        <p>
+        {textShown}
+        </p>
+      </Modal>
     </>
   );
 }

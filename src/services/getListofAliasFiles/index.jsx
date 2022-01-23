@@ -13,7 +13,7 @@ export default function getListOfAliasFiles(){
                 repo: 'cheatsheet',
                 path: `src/documents/`
           })
-          .then(res => setAliasFiles(res.data))
+          .then(function(res){console.log(res);setAliasFiles(res.data)})
           .catch(err => console.log(err));
        }
        onLoad();
