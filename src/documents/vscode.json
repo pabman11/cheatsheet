@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "cheat_type": "alias",
+    "name": "Visual Studio Code",
+    "description": "Visual Studio Code default Keybindings",
+    "items": [
+        {
+            "context": "Editor",
+            "key": "Ctrl+C",
+            "command": "editor.action.clipboardCopyAction",
+            "when": "editorTextFocus && !editorReadonly",
+            "name": "Copy line (empty selection)"
+        },
+        {
+            "context": "Editor",
+            "key": "Ctrl+X",
+            "command": "editor.action.clipboardCutAction",
+            "when": "editorTextFocus && !editorReadonly",
+            "name": "Cut line (empty selection)"
+        },
+        {
+            "context": "Editor",
+            "key": "Ctrl+V",
+            "command": "editor.action.clipboardPasteAction",
+            "when": "editorTextFocus && !editorReadonly",
+            "name": "Paste"
+        },
+        {
+            "context": "Editor",
+            "key": "Ctrl+Z",
+            "command": "editor.action.undo",
+            "when": "editorTextFocus && !editorReadonly",
+            "name": "Undo"
+        },
+        {
+            "context": "Editor",
+            "key": "Ctrl+Y",
+            "command": "editor.action.redo",
+            "when": "editorTextFocus && !editorReadonly",
+            "name": "Redo"
+        },
+        {
+            "context": "Editor",
+            "key": "Ctrl+A",
+            "command": "editor.action.selectAll",
+            "when": "editorTextFocus && !editorReadonly",
+            "name": "Select All"
+        },
+        {
+            "context": "Editor",
+            "key": "Ctrl+D",
+            "command": "editor.action.deleteLines",
+            "when": "editorTextFocus && !editorReadonly",
+            "name": "Delete line (empty selection)"
+        },
+        {
+            "context": "Editor",
+            "key": "Ctrl+K Ctrl+C",
+            "command": "editor.action.copyLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly",
+            "name": "Copy line down"
+        },
+        {
+            "context": "Editor",
+            "key": "Ctrl+K Ctrl+D",
+            "command": "editor.action.deleteLines",
+            "when": "editorTextFocus && !editorReadonly",
+            "name": "Delete line (empty selection)"
+        },
+        {
+            "context": "Editor",
+            "key": "Ctrl+K Ctrl+U",
+            "command": "editor.action.copyLinesUpAction",
+            "when": "editorTextFocus && !editorReadonly",
+            "name": "Copy line up"
+        }
+        
+        
+    ]
+
+}
