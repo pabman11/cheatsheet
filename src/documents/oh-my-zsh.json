@@ -1,8 +1,10 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
+  "type": "array",
+  "cheat_type": "alias",
   "name": "Oh My Zsh",
-  "aliases":[
+  "description": "Oh My Zsh is a collection of useful aliases and functions for the Z shell.",
+  "items":[
   {
     "alias": "-",
     "command": "cd -",
