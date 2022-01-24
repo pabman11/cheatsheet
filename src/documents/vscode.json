@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "array",
-    "cheat_type": "alias",
+    "cheat_type": "keybinding",
     "name": "Visual Studio Code",
     "description": "Visual Studio Code default Keybindings",
     "items": [
@@ -75,8 +75,5 @@
             "when": "editorTextFocus && !editorReadonly",
             "name": "Copy line up"
         }
-        
-        
     ]
-
 }
