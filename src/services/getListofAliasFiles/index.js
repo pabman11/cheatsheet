@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 
 export default async function getListOfAliasFiles(){
 
-    await octokit.request(
+    return await octokit.request(
         'GET /repos/{owner}/{repo}/contents/{path}', {
         owner: 'pabman11',
         repo: 'cheatsheet',
-        path: `src`
+        path: `src/documents`
     })
     .then(res => res.data)
     .catch(err => console.log(err));

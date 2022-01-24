@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getAliases from "../../services/getAliases";
+
 import Alias from "../Alias";
 
 import 'react-responsive-modal/styles.css';
@@ -17,16 +17,6 @@ export default function Aliases() {
     setTextShown(text)
   };
   const onCloseModal = () => setIsOpen(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await getAliases();
-      setAliases(result.aliases);
-    };
-
-    fetchData();
-    
-  }, []);
 
   const copyToClipboard = (command) => {
     navigator.clipboard.writeText(command);

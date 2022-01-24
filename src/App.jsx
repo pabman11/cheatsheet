@@ -1,5 +1,5 @@
 import './App.css'
-import Aliases from './components/aliases'
+import Aliases from './components/Aliases'
 function App() {
   return (
     <div className="App">
