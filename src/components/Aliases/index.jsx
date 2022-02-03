@@ -11,7 +11,12 @@ export default function Aliases() {
   const [textShown, setTextShown] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
-
+  useEffect(() => {
+    const fetchData = async () => {
+      return await getListOfAliasFiles().then(res => setAliases(res));
+    };
+  }, []);
+  
   const onOpenModal = (text) => {
     setIsOpen(true)
     setTextShown(text)

@@ -11,23 +11,18 @@ export default function ListOfAliasTypes() {
     useEffect(() => {
 
         const fetchData = async () => {
-            const result = await getListOfAliasFiles();
-            setAliasTypes(result);
-            return result;
+            return await getListOfAliasFiles().then(res => setAliasTypes(res));
         };
 
-        const fetchCheatFile = ({aliasFiles}) => {
-            let r = []
-            aliasFiles.forEach(async (aliasFile) => {
-                r.push(await getCheatFile({rawFileName: aliasFile.download_url}));
+        const fetchCheatFile = ({aliasTypes}) => {
+            let r = aliasTypes.map(async (aliasFile) => {
+                return await getCheatFile({rawFileName: aliasFile.download_url});
             });
-            setAliasFIles(r);
-            return r;
+            return setAliasFIles(r);
         };
 
-        Promise.allSettled([fetchData(), fetchCheatFile({aliasFiles: aliasTypes})]).then((values) => {
-            console.log(values);
-            console.log(aliasFiles);
+        Promise.all([fetchData(), fetchCheatFile({aliasTypes: aliasTypes})]).then((values) => {
+            console.log(aliasTypes,aliasFiles);
         }
         );
 
@@ -49,9 +44,11 @@ export default function ListOfAliasTypes() {
         <>
             <h1 className={`text-3xl text-center font-bold mb-4`}>Alias Types</h1>
             <section className={`container mx-auto px-4`}>
-                {aliasFiles.map((aliasType, i) => (
-                    <span key={cyrb53(aliasType.name)}>{aliasType.name}</span>
+                <ul className={`list-none flex gap-4`}>
+                {aliasFiles.map((aliasFile, i) => (
+                    <span className={`text-blue-600 transform hover:scale-110 `} key={cyrb53(aliasFile.name)}>{aliasFile.name}</span>
                 ))}
+                </ul>
             </section>
         </>
     );
