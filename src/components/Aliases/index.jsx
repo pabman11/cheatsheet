@@ -13,7 +13,7 @@ import ListOfAliasTypes from "../ListOfAliasTypes";
 export default function Aliases() {
   const [aliases, setAliases] = useState([]);
   const [textShown, setTextShown] = useState("");
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const fetchData = () =>
