@@ -12,7 +12,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-responsive-modal": "6.2.0",
-    "shortid": "^2.2.16"
+    "shortid": "^2.2.16",
+    "nanoid": ">=3.1.31"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "1.0.7",
