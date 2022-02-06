@@ -1,13 +1,13 @@
-import "./App.css";
-import React from "react";
-import Index from "./components/Index";
+import './App.css'
+import React from 'react'
+import Index from './components/Index'
 
-function App() {
+function App () {
     return (
         <div className="App">
             <Index />
         </div>
-    );
+    )
 }
 
-export default App;
+export default App

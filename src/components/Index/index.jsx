@@ -1,10 +1,10 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import { React } from 'react'
+import ListOfAliasTypes from '../ListOfAliasTypes'
 
-export default function Index() {
+export default function Index () {
     return (
         <div>
-            <h1>Index</h1>
+            <ListOfAliasTypes />
         </div>
-    );
+    )
 }
