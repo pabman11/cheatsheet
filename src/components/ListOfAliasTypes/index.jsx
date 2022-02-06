@@ -2,10 +2,11 @@ import { React, useEffect, useState } from 'react'
 import { nanoid } from 'nanoid'
 import getListOfAliasFiles from '../../services/getListofAliasFiles'
 import getCheatFile from '../../services/getListofAliasFiles/getCheatFile'
+import useLocalStorage from '../../utils/useLocalStorage'
 
 export default function ListOfAliasTypes () {
     const [aliasFiles, setAliasFiles] = useState([])
-
+    const [cheatFile, setCheatFile] = useLocalStorage('cheatFile', {})
     let aliasTypes = []
     function setAliasTypes (alias) {
         aliasTypes = alias
@@ -33,6 +34,7 @@ export default function ListOfAliasTypes () {
                         <li
                             className={'text-blue-600 transform hover:scale-110 '}
                             key={nanoid()}
+                            onClick={ () => setCheatFile({ type: aliasFile.cheat_type, file: aliasFile.items }) }
                         >
                             {aliasFile.name}
                         </li>

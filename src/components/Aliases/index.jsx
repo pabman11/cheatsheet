@@ -1,27 +1,27 @@
-import { React, useEffect, useState, useContext } from 'react'
+import { React, useEffect, useState } from 'react'
 
 import { Modal } from 'react-responsive-modal'
 import { nanoid } from 'nanoid'
 
-import getListOfAliasFiles from '../../services/getListofAliasFiles'
 import Alias from '../Alias'
 
 import 'react-responsive-modal/styles.css'
 
 import ListOfAliasTypes from '../ListOfAliasTypes'
 
+import useCheatFile from '../../utils/useCheatFile'
+
 export default function Aliases () {
     const [aliases, setAliases] = useState([])
     const [textShown, setTextShown] = useState('')
     const [isOpen, setIsOpen] = useState(false)
 
+    const cheatFile = useCheatFile()
+
     useEffect(() => {
-        const fetchData = () =>
-            getListOfAliasFiles().then((res) => setAliases(res))
-
-        fetchData()
-    }, [])
-
+        setAliases(cheatFile.file)
+        console.log(cheatFile)
+    }, [cheatFile])
     const onOpenModal = (text) => {
         setIsOpen(true)
         setTextShown(text)
@@ -35,7 +35,6 @@ export default function Aliases () {
 
     return (
         <>
-            <ListOfAliasTypes />
             <section className="container mx-auto px-4">
                 {aliases.map((alias) => (
                     <Alias
