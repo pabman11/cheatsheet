@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from 'react'
+import { React, useEffect, useState, useContext } from 'react'
 
 import { Modal } from 'react-responsive-modal'
 import { nanoid } from 'nanoid'
@@ -7,21 +7,19 @@ import Alias from '../Alias'
 
 import 'react-responsive-modal/styles.css'
 
-import ListOfAliasTypes from '../ListOfAliasTypes'
-
-import useCheatFile from '../../utils/useCheatFile'
-
 export default function Aliases () {
     const [aliases, setAliases] = useState([])
     const [textShown, setTextShown] = useState('')
     const [isOpen, setIsOpen] = useState(false)
 
-    const cheatFile = useCheatFile()
+    const cheatFile = JSON.parse(localStorage.getItem('cheatFile'))
 
     useEffect(() => {
-        setAliases(cheatFile.file)
+        if (cheatFile.file) {
+            setAliases(cheatFile.file)
+        }
         console.log(cheatFile)
-    }, [cheatFile])
+    }, [])
     const onOpenModal = (text) => {
         setIsOpen(true)
         setTextShown(text)

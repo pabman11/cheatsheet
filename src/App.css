@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.13 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -548,6 +548,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(220 252 231 / var(--tw-bg-opacity));
 }
 
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -617,6 +622,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+@media (prefers-color-scheme: dark){
+  body{
+    background-color: #282c34;
+    color: fff;
+  }
+}
+
+@media (prefers-color-scheme: light){
+  html.dark body{
+    background-color: #282c34;
+    color: fff;
+  }
+}
+
 .odd\:bg-red-200:nth-child(odd) {
   --tw-bg-opacity: 1;
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
@@ -636,6 +655,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-blue-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {

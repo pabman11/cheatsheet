@@ -19,3 +19,16 @@
         opacity: 0;
     }
 }
+
+@media (prefers-color-scheme: dark){
+  body{
+    background-color: #282c34;
+    color: fff;
+  }
+}
+@media (prefers-color-scheme: light){
+    html.dark body{
+      background-color: #282c34;
+      color: fff;
+    }
+}
