@@ -4,6 +4,7 @@ import React, { createContext, useState } from 'react'
 export const Context = createContext()
 
 // Creamos un componente Provider el cual recibe como props los children
+// eslint-disable-next-line react/prop-types
 const Provider = ({ children }) => {
     // En este ejercicio vamos a crear una props darkMode y a su vez la vamos a guardar en el Local Storage ;)
     const [darkMode, setDarkMode] = useState(() => {
