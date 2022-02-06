@@ -1,13 +1,13 @@
 import "./App.css";
 import React from "react";
-import Aliases from "./components/Aliases";
+import Index from "./components/Index";
 
 function App() {
-  return (
-    <div className="App">
-      <Aliases />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Index />
+        </div>
+    );
 }
 
 export default App;

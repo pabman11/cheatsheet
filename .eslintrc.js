@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["plugin:react/recommended", "airbnb", "prettier"],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -16,5 +21,13 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "no-unused-vars": "warn",
+    // Indent with 4 spaces
+    indent: ["error", 4],
+
+    // Indent JSX with 4 spaces
+    "react/jsx-indent": ["error", 4],
+
+    // Indent props with 4 spaces
+    "react/jsx-indent-props": ["error", 4],
   },
 };

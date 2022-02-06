@@ -19,9 +19,6 @@ export default function ListOfAliasTypes() {
         setAliasFiles((prev) => [...prev, res]);
       });
     });
-
-    // eslint-disable-next-line no-console
-    console.log(aliasTypes, aliasFiles);
   }
   useEffect(() => {
     refreshAliasNames();
