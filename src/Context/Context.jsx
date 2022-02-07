@@ -11,28 +11,38 @@ const Provider = ({ children }) => {
         const val = window.localStorage.getItem('darkMode')
 
         const root = window.document.documentElement
-        root.classList.add(val ? 'dark' : '')
+        if (val === 'true') {
+            root.classList.add('dark')
+        }
         // La razon de este if es porque cuando obtenemos datos del LS, este viene desde un JSON lo cual se parsea como un String
         // Pero para mi caso lo quiero como un boolean
         if (val === 'true') return true
         else return false
     })
 
+    const [aliasToShow, setAliasToShow] = useState(() => {
+        const val = window.localStorage.getItem('cheatFile')
+        if (val) return JSON.parse(val)
+        else return {}
+    })
+
     // Value es el objeto con los valores y sus respectivas funciones de alteracion de los mismos
     // Piensa que aqui van a estar todas las props que quieres compartir y las funciones para cambiar sus valores
     const value = {
         darkMode,
-        activateDarkMode: (value) => {
-            setDarkMode(value)
-            console.log(value)
+        aliasToShow,
+        showAlias: (alias) => {
+            setAliasToShow(alias)
+        },
+        activateDarkMode: (val) => {
+            setDarkMode(val)
             const root = window.document.documentElement
             root.classList.toggle('dark')
-            window.localStorage.setItem('darkMode', value)
+            window.localStorage.setItem('darkMode', val)
         }
     }
-    // Finalmente retornamos el componente Context.Provider y la pasamos como props el value (recuerda, son las props globales que queremos en nuestra app)
     return (
-        <Context.Provider value={value}>
+        <Context.Provider value={[value.darkMode, value.aliasToShow, value.showAlias, value.activateDarkMode]}>
             {children}
         </Context.Provider>
     )

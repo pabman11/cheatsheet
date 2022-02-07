@@ -1,5 +1,6 @@
-import { React, useEffect, useState } from 'react'
+import { React, useEffect, useState, useContext } from 'react'
 
+import { Context } from '../../Context/Context'
 import { Modal } from 'react-responsive-modal'
 import { nanoid } from 'nanoid'
 
@@ -11,15 +12,13 @@ export default function Aliases () {
     const [aliases, setAliases] = useState([])
     const [textShown, setTextShown] = useState('')
     const [isOpen, setIsOpen] = useState(false)
-
-    const cheatFile = JSON.parse(localStorage.getItem('cheatFile'))
+    const [darkMode, aliasToShow, showAlias, activateDarkMode] = useContext(Context)
 
     useEffect(() => {
-        if (cheatFile.file) {
-            setAliases(cheatFile.file)
+        if (aliasToShow.file) {
+            setAliases(aliasToShow.file)
         }
-        console.log(cheatFile)
-    }, [])
+    }, [aliasToShow])
     const onOpenModal = (text) => {
         setIsOpen(true)
         setTextShown(text)

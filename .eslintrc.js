@@ -30,7 +30,7 @@ module.exports = {
     },
     plugins: ['react', 'prettier'],
     rules: {
-        'no-unused-vars': 'warn',
+        'no-unused-vars': 'off',
         // Indent with 4 spaces
         indent: ['error', 4],
 

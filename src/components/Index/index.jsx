@@ -5,7 +5,7 @@ import Aliases from '../Aliases'
 import { Context } from '../../Context/Context'
 export default function Index () {
     // Le pasamos el objeto Context al hook useContext, de este modo podemos retornar nuestras props globales
-    const { darkMode, activateDarkMode } = useContext(Context)
+    const [darkMode, aliasToShow, showAlias, activateDarkMode] = useContext(Context)
 
     const handleClick = () => {
         activateDarkMode(!darkMode)
