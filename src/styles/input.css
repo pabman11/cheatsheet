@@ -2,24 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes slideToTop {
-  from {
-    transform: translate3d(0, -100%, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
 @media (prefers-color-scheme: dark){
   body{
     background-color: #282c34;
