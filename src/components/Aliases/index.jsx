@@ -34,6 +34,7 @@ const Sheet = ({ type, file }) => {
         return ('')
     }
 }
+
 export default function Aliases () {
     const [aliases, setAliases] = useState([])
     const [aliasType, setAliasType] = useState({ type: 'alias' })

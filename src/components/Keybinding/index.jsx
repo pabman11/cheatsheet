@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */ // TODO: upgrade to latest eslint tooling
 import React from 'react'
+import { nanoid } from 'nanoid'
 
 export default function Keybinding ({
     context,
-    key,
     keybinding,
     command,
     when,
@@ -12,7 +12,7 @@ export default function Keybinding ({
     return (
         <article
             className="grid grid-cols-5 gap-3 odd:bg-red-200 even:bg-red-400 hover:bg-blue-200"
-            key={key}
+            key={nanoid()}
         >
             <span>{context}</span>
             <code>{keybinding}</code>
