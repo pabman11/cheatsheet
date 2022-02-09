@@ -6,13 +6,12 @@ export default function Alias ({
     command,
     explain,
     link,
-    customClickEvent
+    className
 }) {
     return (
         <article
-            className="grid grid-cols-4 gap-3 odd:bg-red-200 even:bg-red-400 hover:bg-blue-200"
+            className={className}
             key={alias}
-            onClick={customClickEvent}
         >
             <code>{alias}</code>
             <span>{command}</span>

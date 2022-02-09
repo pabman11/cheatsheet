@@ -7,11 +7,12 @@ export default function Keybinding ({
     keybinding,
     command,
     when,
-    name
+    name,
+    className
 }) {
     return (
         <article
-            className="grid grid-cols-5 gap-3 odd:bg-red-200 even:bg-red-400 hover:bg-blue-200"
+            className={className}
             key={nanoid()}
         >
             <span>{context}</span>
