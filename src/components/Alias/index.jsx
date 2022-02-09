@@ -13,7 +13,7 @@ export default function Alias ({
             className={className}
             key={alias}
         >
-            <code>{alias}</code>
+            <code className='pl-2'>{alias}</code>
             <span>{command}</span>
             <span>{explain}</span>
             <a href={link}>{link}</a>

@@ -74,6 +74,13 @@
             "command": "editor.action.copyLinesUpAction",
             "when": "editorTextFocus && !editorReadonly",
             "name": "Copy line up"
+        },
+        {
+            "context": "Workbench",
+            "key": "Ctrl+Shift+N",
+            "command": "workbench.action.newWindow",
+            "when": "",
+            "name": "New Window"
         }
     ]
 }

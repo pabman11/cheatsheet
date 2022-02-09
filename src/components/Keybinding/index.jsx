@@ -15,7 +15,7 @@ export default function Keybinding ({
             className={className}
             key={nanoid()}
         >
-            <span>{context}</span>
+            <span className='pl-2'>{context}</span>
             <code>{keybinding}</code>
             <span>{command}</span>
             <span>{when}</span>

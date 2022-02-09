@@ -8,7 +8,7 @@ import Keybinding from '../Keybinding'
 
 const Sheet = ({ type, file }) => {
     const types = ['keybinding', 'alias']
-    const className = 'grid grid-cols-5 gap-3 odd:bg-red-200 even:bg-red-400 hover:bg-blue-200'
+    const className = 'last:rounded-b-xl last: overflow-hidden grid grid-cols-5 gap-3 odd:bg-red-200 even:bg-red-400 hover:bg-blue-200'
     if (type === 'alias') {
         return file.map((alias) => (
             <Alias
@@ -51,7 +51,7 @@ export default function Aliases () {
 
     return (
         <>
-            <section className="rounded-b-[35px] overflow-hidden container mx-auto px-4">
+            <section className="container mx-auto px-4">
                 <Sheet type={aliasType} file={aliases} />
             </section>
         </>
