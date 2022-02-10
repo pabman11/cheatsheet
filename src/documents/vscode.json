@@ -1,6 +1,4 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "type": "array",
     "cheat_type": "keybinding",
     "name": "Visual Studio Code",
     "description": "Visual Studio Code default Keybindings",

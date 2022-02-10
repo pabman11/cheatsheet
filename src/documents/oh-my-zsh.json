@@ -1,6 +1,4 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "array",
   "cheat_type": "alias",
   "name": "Oh My Zsh",
   "description": "Oh My Zsh is a collection of useful aliases and functions for the Z shell.",
