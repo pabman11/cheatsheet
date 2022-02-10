@@ -79,6 +79,20 @@
             "command": "workbench.action.newWindow",
             "when": "",
             "name": "New Window"
+        },
+        {
+            "context": "Editor",
+            "key": "Ctrl+F",
+            "command": "actions.find",
+            "when": "editorFocus ||editorIsOpen",
+            "name": "Search"
+        },
+        {
+            "context": "Workbench",
+            "key": "Ctrl+Shift+F",
+            "command": "workbench.action.findInFiles",
+            "when": "",
+            "name": "Search in Files"
         }
     ]
 }

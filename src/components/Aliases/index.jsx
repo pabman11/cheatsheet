@@ -49,7 +49,7 @@ const Sheet = ({ type, file }) => {
                     name={'name'}
                     className={classNameKeybindingHeader}
                 />
-                {file.map((keybinding) => (
+                {file.sort((a, b) => { return a.context === b.context }).map((keybinding) => (
                     <Keybinding
                         key={nanoid()}
                         context={keybinding.context}
