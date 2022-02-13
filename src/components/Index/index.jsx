@@ -12,9 +12,9 @@ export default function Index () {
     }
     return (
         <div>
-            <div className="flex items-center mr-4 mb-2">
+            <div className="flex items-center mr-4 mb-2" id='darkMode-container'>
                 <input type={'checkbox'} onChange={handleClick} className={'hidden sr-only'} id={'darkMode'} />
-                <label htmlFor={'darkMode'} className={'inline-block rounded-4xl px-10 py-1 bg-blue-400 dark:bg-blue-900'}><span>{darkMode ? 'Light Mode' : 'Dark Mode'}</span></label>
+                <label htmlFor={'darkMode'} className={''}></label>
             </div>
             <MenuOfFiles />
             <Aliases />

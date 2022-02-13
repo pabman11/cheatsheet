@@ -14,3 +14,40 @@
       color: fff;
     }
 }
+
+#darkMode-container{
+  position: fixed;
+  top: 5px;
+  right: 0;
+  z-index: 9999;
+}
+
+#darkMode-container input[type="checkbox"] + label{
+  padding: 15px;
+  background-color: #282c34;
+  color: #fff;
+  border-radius: 20px;
+  width: 60px;
+}
+#darkMode-container input[type="checkbox"] + label:after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 1s ease;
+}
+
+#darkMode-container input[type="checkbox"]:checked + label{
+  background-color: #fff;
+  color: #000;
+}
+
+#darkMode-container input[type="checkbox"]:checked + label:after{
+  left: calc(100% - 15px);
+  background-color: #282c34;
+}
