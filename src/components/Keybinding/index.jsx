@@ -14,6 +14,7 @@ export default function Keybinding ({
         <article
             className={className}
             key={nanoid()}
+            data-context={context}
         >
             <span className='pl-2'>{context}</span>
             <code>{keybinding}</code>

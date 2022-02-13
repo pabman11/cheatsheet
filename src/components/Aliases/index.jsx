@@ -49,17 +49,19 @@ const Sheet = ({ type, file }) => {
                     name={'name'}
                     className={classNameKeybindingHeader}
                 />
-                {file.sort((a, b) => { return a.context === b.context }).map((keybinding) => (
-                    <Keybinding
-                        key={nanoid()}
-                        context={keybinding.context}
-                        keybinding={keybinding.key}
-                        command={keybinding.command}
-                        when={keybinding.when}
-                        name={keybinding.name}
-                        className={classNameKeybinding}
-                    />
-                ))}
+                {[].concat(file)
+                    .sort((a, b) => a.context > b.context ? 1 : -1)
+                    .map((keybinding) => (
+                        <Keybinding
+                            key={nanoid()}
+                            context={keybinding.context}
+                            keybinding={keybinding.key}
+                            command={keybinding.command}
+                            when={keybinding.when}
+                            name={keybinding.name}
+                            className={classNameKeybinding}
+                        />
+                    ))}
             </>
         )
     } else {
