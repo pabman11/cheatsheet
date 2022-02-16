@@ -13,6 +13,8 @@ const Provider = ({ children }) => {
         const root = window.document.documentElement
         if (val === 'true') {
             root.classList.add('dark')
+        } else {
+            root.classList.add('light')
         }
         // La razon de este if es porque cuando obtenemos datos del LS, este viene desde un JSON lo cual se parsea como un String
         // Pero para mi caso lo quiero como un boolean
@@ -38,6 +40,7 @@ const Provider = ({ children }) => {
             setDarkMode(val)
             const root = window.document.documentElement
             root.classList.toggle('dark')
+            root.classList.toggle('light')
             window.localStorage.setItem('darkMode', val)
         }
     }

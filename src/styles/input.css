@@ -3,15 +3,24 @@
 @tailwind utilities;
 
 @media (prefers-color-scheme: dark){
-  body{
+
+  html.dark body, body{
     background-color: #282c34;
-    color: fff;
+    color: #fff;
+  }
+  html.light body{
+    background-color: #f5f5f5;
+    color: #282c34;
   }
 }
 @media (prefers-color-scheme: light){
     html.dark body{
       background-color: #282c34;
-      color: fff;
+      color: #fff;
+    }
+    html.light body, body{
+      background-color: #f5f5f5;
+      color: #282c34;
     }
 }
 

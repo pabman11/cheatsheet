@@ -9,11 +9,15 @@ import Keybinding from '../Keybinding'
 
 const Sheet = ({ type, file }) => {
     const types = ['keybinding', 'alias']
-    const classNameKeybinding = 'last:rounded-b-xl last: overflow-hidden grid grid-cols-5 gap-3 odd:bg-red-200 even:bg-red-400 hover:bg-blue-200'
-    const classNameKeybindingHeader = 'grid grid-cols-5 gap-3 odd:bg-indigo-200 even:bg-indigo-400 hover:bg-blue-200 weight-bold'
 
-    const classNameAlias = 'last:rounded-b-xl last: overflow-hidden grid grid-cols-4 gap-3 odd:bg-red-200 even:bg-red-400 hover:bg-blue-200'
-    const classNameAliasHeader = 'grid grid-cols-4 gap-3 odd:bg-indigo-200 even:bg-indigo-400 hover:bg-blue-200 weight-bold'
+    const classNameHeaderGeneric = 'grid gap-3 odd:bg-indigo-200 even:bg-indigo-400 hover:bg-blue-200 weight-bold text-neutral-700'
+    const classNameGeneric = 'last:rounded-b-xl last: overflow-hidden grid gap-3 odd:bg-red-200 even:bg-red-400 hover:bg-blue-200 text-neutral-700'
+
+    const classNameKeybinding = classNameGeneric + ' grid-cols-5'
+    const classNameKeybindingHeader = classNameHeaderGeneric + ' grid-cols-5'
+
+    const classNameAlias = classNameGeneric + ' grid-cols-4'
+    const classNameAliasHeader = classNameHeaderGeneric + ' grid-cols-4'
     if (type === 'alias') {
         return (
             <>
