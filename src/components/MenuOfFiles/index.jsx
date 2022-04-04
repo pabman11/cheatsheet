@@ -37,7 +37,7 @@ export default function MenuOfFiles () {
     return (
         <>
             <h1 className="text-3xl text-center font-bold mb-4">Alias Types</h1>
-            <section className="container mx-auto px-4 ">
+            <section className="">
                 <ul className="list-none flex gap-4 rounded-t-xl overflow-hidden border-solid border-b-2 border-t-2 border-indigo-600">
                     {aliasFiles.map((aliasFile) => (
                         <li

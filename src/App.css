@@ -468,40 +468,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -519,6 +485,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
 .mr-4 {
   margin-right: 1rem;
 }
@@ -531,12 +501,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
-.flex {
-  display: flex;
+.block {
+  display: block;
 }
 
-.grid {
-  display: grid;
+.flex {
+  display: flex;
 }
 
 .hidden {
@@ -577,6 +547,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.break-all {
+  word-break: break-all;
 }
 
 .rounded-t-xl {
@@ -692,6 +666,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: #fff;
   border-radius: 20px;
   width: 60px;
+  border-width: 2px;
+  border-color: #fff;
 }
 
 #darkMode-container input[type="checkbox"] + label:after{
@@ -709,12 +685,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 #darkMode-container input[type="checkbox"]:checked + label{
   background-color: #fff;
-  color: #000;
+  color: #282c34;
+  border-color: #282c34;
 }
 
 #darkMode-container input[type="checkbox"]:checked + label:after{
   left: calc(100% - 15px);
   background-color: #282c34;
+}
+
+.after\:content-\[\"\:\"\]::after {
+  --tw-content: ":";
+  content: var(--tw-content);
 }
 
 .first\:rounded-tl-xl:first-child {
@@ -759,4 +741,50 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:grid {
+    display: grid;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .lg\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .lg\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .lg\:container {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .lg\:container {
+      max-width: 1536px;
+    }
+  }
 }

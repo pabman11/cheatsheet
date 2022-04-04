@@ -13,10 +13,10 @@ export default function Alias ({
             className={className}
             key={alias}
         >
-            <code className='pl-2'>{alias}</code>
-            <span>{command}</span>
-            <span>{explain}</span>
-            <a href={link}>{link}</a>
+            <code className='pl-2 '><span className='sm:hidden after:content-[":"] mr-1 font-bold'>Alias</span>{alias}</code>
+            <span className='break-all'><span className='sm:hidden after:content-[":"] mr-1 font-bold'>Command</span>{command}</span>
+            <span className='break-all'><span className='sm:hidden after:content-[":"] mr-1 font-bold'>Explain</span>{explain}</span>
+            <a href={link} className='break-all'><span className='sm:hidden after:content-[":"] mr-1 font-bold' >Link</span>{link}</a>
         </article>
     )
 }

@@ -37,6 +37,8 @@
   color: #fff;
   border-radius: 20px;
   width: 60px;
+  border-width: 2px;
+  border-color: #fff;
 }
 #darkMode-container input[type="checkbox"] + label:after{
   content: "";
@@ -53,7 +55,8 @@
 
 #darkMode-container input[type="checkbox"]:checked + label{
   background-color: #fff;
-  color: #000;
+  color: #282c34;
+  border-color: #282c34;
 }
 
 #darkMode-container input[type="checkbox"]:checked + label:after{

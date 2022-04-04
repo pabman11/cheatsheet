@@ -11,7 +11,7 @@ export default function Index () {
         activateDarkMode(!darkMode)
     }
     return (
-        <div>
+        <div className='lg:container mx-auto px-4 '>
             <div className="flex items-center mr-4 mb-2" id='darkMode-container'>
                 <input type={'checkbox'} onChange={handleClick} className={'hidden sr-only'} id={'darkMode'} />
                 <label htmlFor={'darkMode'} className={''}></label>

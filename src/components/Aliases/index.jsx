@@ -10,8 +10,8 @@ import Keybinding from '../Keybinding'
 const Sheet = ({ type, file }) => {
     const types = ['keybinding', 'alias']
 
-    const classNameHeaderGeneric = 'grid gap-3 odd:bg-indigo-200 even:bg-indigo-400 hover:bg-blue-200 weight-bold text-neutral-700'
-    const classNameGeneric = 'last:rounded-b-xl last: overflow-hidden grid gap-3 odd:bg-red-200 even:bg-red-400 hover:bg-blue-200 text-neutral-700'
+    const classNameHeaderGeneric = 'gap-3 odd:bg-indigo-200 even:bg-indigo-400 hover:bg-blue-200 weight-bold text-neutral-700 hidden sm:grid'
+    const classNameGeneric = 'last:rounded-b-xl last: overflow-hidden sm:grid gap-3 odd:bg-red-200 even:bg-red-400 hover:bg-blue-200 text-neutral-700'
 
     const classNameKeybinding = classNameGeneric + ' grid-cols-5'
     const classNameKeybindingHeader = classNameHeaderGeneric + ' grid-cols-5'
@@ -87,7 +87,7 @@ export default function Aliases () {
 
     return (
         <>
-            <section className="container mx-auto px-4">
+            <section className="">
                 <Sheet type={aliasType} file={aliases} />
             </section>
         </>
